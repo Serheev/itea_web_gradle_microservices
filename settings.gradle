@@ -1,0 +1,5 @@
+rootProject.name = 'itea_web_gradle_microservices'
+
+include "validator"
+include "methods"
+

@@ -1,0 +1,52 @@
+buildscript {
+    ext {
+        depManagementVersion = "1.0.5.RELEASE"
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+//        classpath ("io.spring.gradle:dependency-management-plugin:${depManagementVersion}")
+    }
+}
+
+allprojects {
+    group 'com.serheev'
+    version '1.0-SNAPSHOT'
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    //apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    ext {
+        SLF4J_VERSION = '1.7.10'
+        JUNIT_VERSION = '4.12'
+        LOMBOK_VERSION = '1.18.10'
+    }
+
+//    dependencyManagement {
+//        imports {
+//            mavenBom 'io.spring.platform:platform-bom:1.1.2.RELEASE'
+//        }
+//    }
+
+    dependencies {
+        compile "org.slf4j:slf4j-api:${SLF4J_VERSION}"
+        compile "org.slf4j:slf4j-log4j12:${SLF4J_VERSION}"
+        compileOnly "org.projectlombok:lombok:${LOMBOK_VERSION}"
+        annotationProcessor "org.projectlombok:lombok:${LOMBOK_VERSION}"
+
+        testCompile "junit:junit:${JUNIT_VERSION}"
+    }
+}
