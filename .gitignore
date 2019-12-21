@@ -1,4 +1,5 @@
 # Project exclude paths
+/.idea/
 /.gradle/
 /methods/build/
 /methods/build/classes/java/main/
@@ -6,3 +7,6 @@
 /validator/build/
 /validator/build/classes/java/main/
 /validator/build/classes/java/test/
+/gradlew
+/gradlew.bat
+/gradle/

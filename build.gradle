@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-//        classpath ("io.spring.gradle:dependency-management-plugin:${depManagementVersion}")
+
     }
 }
 
@@ -24,7 +24,6 @@ subprojects {
 
     apply plugin: 'java'
     apply plugin: 'idea'
-    //apply plugin: 'io.spring.dependency-management'
 
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
@@ -34,12 +33,6 @@ subprojects {
         JUNIT_VERSION = '4.12'
         LOMBOK_VERSION = '1.18.10'
     }
-
-//    dependencyManagement {
-//        imports {
-//            mavenBom 'io.spring.platform:platform-bom:1.1.2.RELEASE'
-//        }
-//    }
 
     dependencies {
         compile "org.slf4j:slf4j-api:${SLF4J_VERSION}"
